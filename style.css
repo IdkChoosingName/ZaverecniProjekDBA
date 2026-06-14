@@ -1,5 +1,8 @@
 body{
     background-color: black;
+    background-image: url("https://picsum.photos/id/1076/600/400");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 p{
@@ -21,33 +24,135 @@ label{
     color: #ffffff;
 }
 
-
+/*Lišta*/
 
 .lišta div, .lišta a{
     color: white;
-    margin: auto;
     text-align: center;
     text-decoration: none;
-    margin-bottom: -50px;
 }
 
 .lišta{
     display: flex;
-    align-content: center;
     justify-content: center;
+    align-items: center;
 }
 
 .lišta div{
+    display: flex;
     flex: 1;
     text-align: center;
     border: solid white 2px;
     border-radius: 5px;
     margin: 5px;
     height: 50px;
+    background-color: #000000;
+    justify-content: center;
+    align-items: center;
 }
 
-.lišta a:hover{
+.lišta a{
+    display: flex;
+    height: 100%;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.lišta div:hover{
     background-color: white;
-    color: black;
 }
 
+.lišta div:hover a{
+    color: black; 
+}
+
+/*Home*/
+.home{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*O nás*/
+
+.AboutUs{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Booking*/
+
+.trida{
+    display: grid;
+    grid-template-columns: repeat(4,50px);
+    
+}
+
+.trida label{
+    text-align: center;
+}
+
+.textbox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+.formular{
+    margin: auto;
+    display: flex;
+    width: min-content;
+    flex-direction: column;
+}
+
+.datum{
+    display: flex;
+}
+
+.odeslat{
+    margin: auto;
+}
+
+/*Ceník*/
+
+.Cenik{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Cenik table{
+    border: 1px black solid;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+.Cenik th{
+    border: 1px black solid;
+    border-collapse: collapse;
+}
+
+/*mobilní zobrazení*/
+@media (max-width:1000px) {
+    body{
+        background-image: none;
+        background-color: #000000;
+    }
+
+    .lišta{
+        flex-direction: column;
+    }
+
+    .lišta div{
+        min-width: 100%;
+        min-height: 50px;
+        align-items: center;
+    }
+
+    .home{
+        color: #ffffff;
+    }
+}
